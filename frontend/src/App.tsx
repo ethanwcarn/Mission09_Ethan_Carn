@@ -99,6 +99,25 @@ function PageDescription() {
   );
 }
 
+// Show users exactly how to enable CFBD logos after cloning the project.
+// This helps because API keys are typically kept out of source control.
+function ApiSetupInstructions() {
+  return (
+    <section className="api-setup-box">
+      <h2>Enable School Logos (One-Time Setup)</h2>
+      <ol>
+        <li>Create a free account at CollegeFootballData.com and generate an API key.</li>
+        <li>Copy `frontend/.env.example` to `frontend/.env`.</li>
+        <li>Open `frontend/.env` and set: `VITE_CFBD_API_KEY=your_api_key_here`</li>
+        <li>Save the file and restart the app with `npm run dev` inside `frontend`.</li>
+      </ol>
+      <p>
+        If no key is set, the app still runs and uses ESPN/acronym logo fallbacks.
+      </p>
+    </section>
+  );
+}
+
 // Component #3:
 // Iterates through all teams and renders one TeamCard per school.
 function TeamList({
@@ -344,6 +363,7 @@ function App() {
     <main className="app-container">
       <HeadingSection />
       <PageDescription />
+      <ApiSetupInstructions />
       {logoStatusMessage ? (
         <p className="logo-status-message">{logoStatusMessage}</p>
       ) : null}

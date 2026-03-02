@@ -16,6 +16,28 @@
   font-size: 1rem;
 }
 
+.api-setup-box {
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.9rem 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.api-setup-box h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.api-setup-box ol {
+  margin: 0 0 0.5rem 1.25rem;
+  padding: 0;
+}
+
+.api-setup-box p {
+  margin: 0;
+}
+
 .logo-status-message {
   margin: 0 0 1rem 0;
   padding: 0.6rem 0.75rem;
