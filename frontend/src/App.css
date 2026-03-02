@@ -1,42 +1,102 @@
+/* Keep the app centered with readable spacing for the full team list. */
 #root {
-  max-width: 1280px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Main app wrapper used in App.tsx. */
+.app-container {
+  color: #000;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Small intro paragraph under the main heading. */
+.page-description {
+  margin: 0 0 1.25rem 0;
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.logo-status-message {
+  margin: 0 0 1rem 0;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background: #fff;
 }
 
-.card {
-  padding: 2em;
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 0.75rem 0;
 }
 
-.read-the-docs {
-  color: #888;
+.search-input,
+.filter-select,
+.filter-button {
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.95rem;
+  background: #fff;
+  color: #000;
+}
+
+.search-input {
+  min-width: 240px;
+  flex: 1 1 260px;
+}
+
+.filter-select {
+  min-width: 230px;
+}
+
+.filter-button {
+  cursor: pointer;
+}
+
+.results-count {
+  margin: 0 0 1rem 0;
+}
+
+/* Grid layout to present each school card cleanly. */
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* Team card styling required by the assignment. */
+.team-card {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 0.9rem;
+  background-color: #fff;
+}
+
+.team-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
+.team-logo-fallback {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+  background-color: #fff;
+}
+
+.team-card h2,
+.team-card h3 {
+  margin: 0 0 0.45rem 0;
 }
